@@ -144,8 +144,6 @@ function techList(list, nameEntry) {
   return aux;
 }
 
-// console.log(techList([], 'Lucas'));
-
 module.exports = {
   calcArea,
   catAndMouse,
