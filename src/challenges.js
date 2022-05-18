@@ -86,11 +86,11 @@ function fizzBuzz(arrayFizz) {
 
 // Desafio 9
 function encode(stringParam) {
-  let splitWord = stringParam.split("");
+  let splitWord = stringParam.split('');
   let aux = [];
   for (let i = 0; i < splitWord.length; i += 1) {
     if (splitWord[i] === 'a') {
-    aux.push('1');
+      aux.push('1');
     } else if (splitWord[i] === 'e') {
       aux.push('2');
     } else if (splitWord[i] === 'i') {
@@ -103,15 +103,15 @@ function encode(stringParam) {
       aux.push(splitWord[i]);
     }
   }
-  return aux.join("");
+  return aux.join('');
 }
 
 function decode(stringParam2) {
-  let splitWord = stringParam2.split("");
+  let splitWord = stringParam2.split('');
   let aux = [];
   for (let i = 0; i < splitWord.length; i += 1) {
     if (splitWord[i] === '1') {
-    aux.push('a');
+      aux.push('a');
     } else if (splitWord[i] === '2') {
       aux.push('e');
     } else if (splitWord[i] === '3') {
@@ -124,13 +124,27 @@ function decode(stringParam2) {
       aux.push(splitWord[i]);
     }
   }
-  return aux.join("");
+  return aux.join('');
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(list, nameEntry) {
+  let aux = [];
+  let aux2 = list.sort();
+  if (list.length < 1) {
+    return 'Vazio!';
+  }
+
+  for (let i = 0; i < aux2.length; i += 1) {
+    aux.push({
+      tech: aux2[i],
+      name: nameEntry
+    });
+  }
+  return aux;
 }
+
+// console.log(techList([], 'Lucas'));
 
 module.exports = {
   calcArea,
